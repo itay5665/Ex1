@@ -1,9 +1,11 @@
 
 public class Ex1 {
 
+    //replace the string with int value
     public static int number2Int(String num) {
-        int ans = -1;
+        int ans = -1;//הגדרת ברירת מחדל
 
+        //
         if (isNumber(num)) {
             String[] parts = num.split("b");
             String numberPart = parts[0];
@@ -17,8 +19,9 @@ public class Ex1 {
 
         return ans;
     }
-
+    //check if the input string is by the format of <number>b<base>
     public static boolean isNumber(String a) {
+       //check if "b" exist in the input string
         if (a == null || !a.contains("b")) {
             return false;
         }
@@ -37,18 +40,18 @@ public class Ex1 {
             return false;
         }
     }
-
+    //replace the int with string value for out result
     public static String int2Number(int num, int base) {
         if (num < 0 || base < 2 || base > 16) {
             return "";
         }
         return Integer.toString(num, base).toUpperCase() + "b" + base;
     }
-
+    //provide insurance that the inputs arent the same.
     public static boolean equals(String n1, String n2) {
         return number2Int(n1) != -1 && number2Int(n2) != -1 && number2Int(n1) == number2Int(n2);
     }
-
+    //find the max index for the max value
     public static int maxIndex(String[] arr) {
         int maxIndex = 0;
         int maxValue = -1;
