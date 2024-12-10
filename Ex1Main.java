@@ -6,7 +6,8 @@ public class Ex1Main {
         Scanner scanner = new Scanner(System.in);
         String num1, num2;
         System.out.println();
-        System.out.print("Please Type 'quit' to exit");
+        System.out.println("Please Type 'quit' to exit");
+        System.out.println();
 
         while (true) {
             System.out.print("Enter a string as number#1 : ");
